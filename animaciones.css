@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /*.image-animation {
+    width: 50%;
+  }
+  */
+  .image {
+    width: 10%; /* tamanio de la imagen */
+    height: auto;
+    animation: desplazamiento-1 4s linear forwards; /* el linear infinite es un bucle de la image , con el forwards se queda la imagen al terminar la animacion */
+  }
+  
+  @keyframes desplazamiento-1 {
+    0% {
+      transform: translateX(-100%); /* izquierda a derecha */
+    }
+    100% {
+      transform: translateX(50%); /* rapidez de movimiento */
+    }
+    
+  }
+
+
+  .image-2 {
+    width: 10%;
+    height: auto;
+    animation: desplazamiento-2 4s linear forwards;
+}
+
+  @keyframes desplazamiento-2 {
+    0% {
+      transform: translateX(900%); /* derecha a izquierda */
+    }
+    100% {
+      transform: translateX(10%); /* rapidez de movimiento */
+    }
+}
+  
