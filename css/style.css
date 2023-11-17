@@ -49,60 +49,60 @@ nav{
 
 .layer-9{
     background-image: url("../images/primerEdificio.png");
-    width: 37%;
-    height: 30%;
-    margin-top: 682px;
-    margin-left: 350px;
+    width: 543.5px;
+    height: 213.5px;
+    margin-top: 615px;
+    margin-left: 380px;
 }
 
 .layer-8{
     background-image: url("../images/segundoEdificioIzquierda.png");
-    margin-top: 100px;
-    width: 30%;
-    height: 90%;
-    margin-left: -63px;
+    margin-top: 134px;
+    width: 452px;
+    height: 720px;
+    margin-left: -53px;
 }
 
 .layer-7{
     background-image: url("../images/tercerEdificoDerecha.png");
     animation: scroll 0s infinite linear;
-    width: 20%;
-    height: 100%;
-    margin-top: 20px;
-    margin-left: 900px;
+    width: 374px;
+    height: 727.5px;
+    margin-top: 115px;
+    margin-left: 908px;
 }
 .layer-6{
     background-image: url("../images/primerChicaSpider.png");
     animation-name: scale;
-    width: 20%;
-    height: 50%;
-    margin-left: 80px;
-    margin-top: 150px;
+    width: 360px;
+    height: 444px;
+    margin-left: 45px;
+    margin-top: 138px;
 }
 .layer-5{
     background-image: url("../images/spiderman.png");
     animation-name: scale;
-    width: 20%;
-    height: 50%;
-    margin-left: 480px;
-    margin-top: 550px;
+    width: 465px;
+    height: 465px;
+    margin-left: 380px;
+    margin-top: 420px;
 }
 .layer-4{
     background-image: url("../images/spidermanBlack.png");
     animation-name: scale;
-    width: 20%;
-    height: 40%;
-    margin-left: 780px;
-    margin-top: 450px;
+    width: 393px;
+    height: 393px;
+    margin-left: 680px;
+    margin-top: 350px;
 }
 .layer-3{
-    background-image: url("../images/spidermanBlack.png");
+    background-image: url("../images/LOGO.png");
     animation-name: scale;
-    width: 20%;
-    height: 40%;
-    margin-left: 780px;
-    margin-top: 450px;
-}
+    width: 590px;
+    height: 301px;
+    margin-left: 345px;
+    margin-top: 100px;
+}/*
 .layer-2{
     background-image: url("../images/spidermanBlack.png");
     animation-name: scale;
@@ -110,4 +110,4 @@ nav{
     height: 40%;
     margin-left: 780px;
     margin-top: 450px;
-}
+}*/
