@@ -1,41 +1,100 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  /*.image-animation {
-    width: 50%;
-  }
-  */
-  .image {
-    width: 10%; /* tamanio de la imagen */
-    height: auto;
-    animation: desplazamiento-1 4s linear forwards; /* el linear infinite es un bucle de la image , con el forwards se queda la imagen al terminar la animacion */
-  }
-  
-  @keyframes desplazamiento-1 {
-    0% {
-      transform: translateX(-100%); /* izquierda a derecha */
-    }
-    100% {
-      transform: translateX(50%); /* rapidez de movimiento */
-    }
-    
-  }
-
-
-  .image-2 {
-    width: 10%;
-    height: auto;
-    animation: desplazamiento-2 4s linear forwards;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: grey;
 }
 
-  @keyframes desplazamiento-2 {
-    0% {
-      transform: translateX(900%); /* derecha a izquierda */
-    }
-    100% {
-      transform: translateX(10%); /* rapidez de movimiento */
-    }
+.container-image {
+  display: flex;
 }
-  
+
+.image-animation {
+  height: 10%;
+  display: flex;
+}
+
+.image {
+  width: 40%;
+  height: auto;
+  animation: desplazamiento-1 4s linear forwards;
+}
+
+@keyframes desplazamiento-1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.image-2 {
+  width: 40%;
+  height: auto;
+  animation: desplazamiento-2 4s linear forwards;
+}
+
+@keyframes desplazamiento-2 {
+  0% {
+    transform: translateX(250%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.image-3 {
+  width: 20%;
+  height: auto;
+  animation: desplazamiento-3 2s linear forwards;
+  margin: 0 auto;
+}
+
+@keyframes desplazamiento-3 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(80%);
+  }
+}
+
+.image-title {
+  display: block;
+  width: 20%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: titleShow 5s forwards;
+}
+
+@keyframes titleShow {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.image-2-scroll {
+  height: 30%;
+}
