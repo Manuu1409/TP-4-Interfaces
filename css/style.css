@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+    width: 1280px;
+}
+
+@keyframes scroll {   /* es mover el background position de 0 a la posicion que queremos va de 0 a la que queremos continuamente*/
+    0% { background-position-x: 117%; }
+    100% { background-position-x: 0%; }
+}    
+
+@keyframes scale{
+    from{
+        scale: 100%;
+    }
+    to{
+        scale: 110%;
+    }
+}
+
+nav{
+    width: 100%;
+}
+/*  TDDOS LOS LAYER DEBEN TENRE UNA PROPIEDAD EN COMUN  */
+.layer{
+    width: 1280px;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-repeat: repeat-x; /*hace que la imagen cuando se 
+                            termina en x se pone devuelta la imagen la pone el browser automaticamente*/
+    /*animation-name: scroll;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;*/
+}
+
+/*  en cada layer cambiamos la velocidad de la animacion    */
+.layer-10{
+    background-image: url("../images/primerCielo.png");
+    animation: scroll 30s infinite linear ;
+}
+
+.layer-9{
+    background-image: url("../images/primerEdificio.png");
+    width: 37%;
+    height: 30%;
+    margin-top: 682px;
+    margin-left: 350px;
+}
+
+.layer-8{
+    background-image: url("../images/segundoEdificioIzquierda.png");
+    margin-top: 100px;
+    width: 30%;
+    height: 90%;
+    margin-left: -63px;
+}
+
+.layer-7{
+    background-image: url("../images/tercerEdificoDerecha.png");
+    animation: scroll 0s infinite linear;
+    width: 20%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 900px;
+}
+.layer-6{
+    background-image: url("../images/primerChicaSpider.png");
+    animation-name: scale;
+    width: 20%;
+    height: 50%;
+    margin-left: 80px;
+    margin-top: 150px;
+}
+.layer-5{
+    background-image: url("../images/spiderman.png");
+    animation-name: scale;
+    width: 20%;
+    height: 50%;
+    margin-left: 480px;
+    margin-top: 550px;
+}
+.layer-4{
+    background-image: url("../images/spidermanBlack.png");
+    animation-name: scale;
+    width: 20%;
+    height: 40%;
+    margin-left: 780px;
+    margin-top: 450px;
+}
+.layer-3{
+    background-image: url("../images/spidermanBlack.png");
+    animation-name: scale;
+    width: 20%;
+    height: 40%;
+    margin-left: 780px;
+    margin-top: 450px;
+}
+.layer-2{
+    background-image: url("../images/spidermanBlack.png");
+    animation-name: scale;
+    width: 20%;
+    height: 40%;
+    margin-left: 780px;
+    margin-top: 450px;
+}
