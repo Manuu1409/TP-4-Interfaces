@@ -3,6 +3,7 @@ body{
     margin: 0 auto;
     border-left: 1px solid red;
     border-right: 1px solid red;
+    color: white;
 }
 
 .spin, .loader, .counter {

@@ -6,42 +6,47 @@
     outline: none;
     box-sizing: border-box;
 }
+html{
+    height: 1000px;
+}
 body{
     background-color: white;
     max-width: 1280px;
 }
 header{
-    margin-top: -18px;
-    position: sticky;
-    top: 10px;
-    z-index: 2;
+    width: 1280px;
+    height: 80px;
+    position: fixed;
+    z-index: 99999;
 }
 header img{
     width: 133px;
     height: 68px;
-    position: absolute;
-    margin-top: 6px;
+    position: fixed;
     left: 600px;
     top: 0px;
+    padding-top: 10px;
+
 }
 header svg {
-    position: absolute;
+    transform: scale(1.2);
+    position: fixed;
     left: 100px;
-    margin-top: 13px;
+    margin-top: 20px;
+
 }
 
 header.abajo{
-    top: 0px;
-    height: 70px;
-    /*background-color: rgba(255, 255, 255, 0.8);    */
+    width: 1280px;
+    height: 80px;
+    /*  background-color: rgba(255, 255, 255, 0.8);    */
     background: linear-gradient(180deg, rgba(84, 153, 248, 0.9) 0%, rgba(84, 153, 248, 0.5) 100%);
     padding-bottom: 20px;
 }
 
 .btnComprar{
-    margin-top: 10px;
-    position: absolute;
-    top: 0px;
+    margin-top: 13px;
+    position: fixed;
     left: 1000px;
     width: 200px;
     height: 50px;
@@ -71,8 +76,8 @@ header.abajo{
 }
 
 @keyframes scroll {   /* es mover el background position de 0 a la posicion que queremos va de 0 a la que queremos continuamente*/
-    0% { background-position-x: 117%; }
-    100% { background-position-x: 0%; }
+    0% { background-position-x:  0%; }
+    100% { background-position-x: 500%; }
 } 
 
 
@@ -90,9 +95,9 @@ nav{
     background-size: cover;
     background-repeat: repeat-x; /*hace que la imagen cuando se 
                             termina en x se pone devuelta la imagen la pone el browser automaticamente*/
-    /*animation-name: scroll;
+    animation-name: scroll;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;*/
+    animation-iteration-count: infinite;
 }
 .layer-6,
 .layer-5,
@@ -105,7 +110,7 @@ nav{
 /*  en cada layer cambiamos la velocidad de la animacion    */
 .layer-10{
     background-image: url("../images/primerCielo.png");
-    animation: scroll 15s infinite linear ;
+    animation: scroll 10s infinite linear ;
 }
 
 .layer-9{
@@ -226,8 +231,8 @@ nav{
 }
 .imagenPrimerTexto{
     position: absolute;
-    top: 1300px;
-    right: 880px;
+    top: 1320px;
+    right: 470px;
     width: 751.649px;
     height: 413.131px;
     transform: rotate(-2.222deg);
@@ -277,53 +282,142 @@ nav{
     height: 217px;
 }
 
-.seccion-3{
+
+.seccion-3-primerImagen{
     position: absolute;
     top: 2500px;
-}
-.seccion-3 img:first-child{
     width: 1280px;
     height: 566px;
-    z-index: 3;
 }
 
-.seccion-3 img:nth-child(2){
+.seccion-3-segundaImagen{
     width: 546.108px;
     height: 326.509px;
     transform: rotate(-13.078deg);
     position: absolute;
-    right: 600px;
-    top: -100px;
-    z-index: 4;
+    right: 650px;
+    top: 2400px;
 
 }
-.seccion-3 img:nth-child(3){
+.seccion-3-tercerImagen{
     width: 543.218px;
     height: 325.787px;
     transform: rotate(-26.474deg);
     position: absolute;
-    right: 600px;
-    top: 100px;
-    z-index: 5;
+    right: 650px;
+    top: 2580px;
 
 }
-.seccion-3 img:nth-child(4){
+.seccion-3-cuartaImagen{
     width: 546.108px;
     height: 326.509px;
     transform: rotate(-36.016deg);
     position: absolute;
-    right: 600px;
-    top: 300px;
-    z-index: 6;
+    right: 650px;
+    top: 2820px;
+    
+
 }
 
-/*
+
 .seccion-4{
     background: #000;
     width: 1280px;
-    height: 8968px;
+    height: 898px;
     position: absolute;
-    top: 2900px;
-    z-index: 1;
+    top: 2970px;
+    z-index:-1;
 }
-*/
+.tituloSeccion-4{
+    position: absolute;
+    top:  3250px;
+    left: 100px;
+    width: 667px;
+    color: #FFF;    font-family: Lato;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%; /* 56.7px */
+}
+.seccion-4-layer{
+    width: 1280px;
+    height: 100%;
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+
+@keyframes scroll2 {   /* es mover el background position de 0 a la posicion que queremos va de 0 a la que queremos continuamente*/
+    0% { background-position-x:  0%; }
+    100% { background-position-x: 100%; }
+} 
+
+.seccion-4-layer-6{
+    position: absolute;
+    top:  3500px;
+    margin-left: 100px;
+    width: 1077.059px;
+    height: 527.626px;
+    background-image: url("../images/cieloSeccion-4.png");
+    animation: scroll2 2s infinite linear ;
+}
+
+.seccion-4-layer-5{
+    position: absolute;
+    top:  3500px;
+    margin-left: 100px;
+    width: 1077.059px;
+    height: 527.626px;
+    background-image: url("../images/capa3-Seccion-4.png");
+}
+
+.seccion-4-layer-4{
+    position: absolute;
+    top:  3500px;
+    margin-left: 100px;
+    background-image: url("../images/capa2-Seccion-4.png");
+    width: 1077.059px;
+    height: 527.626px;
+}
+.seccion-4-layer-3{
+    margin-left: 130px;
+    position: absolute;
+    top:  3443px;
+    background-image: url("../images/elasticGirl.png");
+    width: 451.258px;
+    height: 591.442px;
+    transform: rotate(-12.483deg);
+
+}
+.seccion-4-layer-2{
+    position: absolute;
+    top:  3300px;
+    margin-left: 55 0px;
+    width: 398px;
+    height: 552.462px;
+    transform: rotate(13.615deg);
+    background-image: url("../images/pantera-removebg-preview.png");
+
+}
+.seccion-4-layer-1{
+    position: absolute;
+    top:  3633px;
+    width: 410.106px;
+    height: 437.972px;
+    transform: rotate(7.515deg);
+    margin-left: 790px;
+    background-image: url("../images/hulk.png");
+
+}
+
+.tituloSeccion-5{
+    position: absolute;
+    top: 4200px;
+    margin-left: 100px;
+    width: 802px;
+    color: #000;
+    font-family: Lato;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%; /* 56.7px */
+    }
