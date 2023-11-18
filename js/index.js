@@ -15,9 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const telaran2aLimit = 400;
 
     window.addEventListener('scroll', function () {
+
+        var header = document.querySelector("header")
+        header.classList.toggle("abajo",window.scrollY>0)  //cuando la haga scroll y el valor sea mayor a 0
+
       // Obtener el desplazamiento vertical de la página
       const scrollY = window.scrollY || window.pageYOffset;
-  
+        
       // Ajustar la posición vertical de Spiderman dentro del rango especificado
       if (scrollY <= spidermanLimit) {
         spiderman.style.transform = `translateY(${scrollY * 0.2}px)`;

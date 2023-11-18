@@ -10,6 +10,47 @@ body{
     background-color: white;
     max-width: 1280px;
 }
+header{
+    margin-top: -18px;
+    position: sticky;
+    top: 10px;
+    z-index: 2;
+}
+header svg {
+    position: absolute;
+    left: 100px;
+    margin-top: 13px;
+}
+
+header.abajo{
+    top: 0px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.8);    
+    padding: 15px 30px;
+}
+
+.btnComprar{
+    margin-top: 10px;
+    position: absolute;
+    top: 0px;
+    left: 1000px;
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 111px;
+    border: 8px solid var(--2982-ff, #2982FF);
+    background: #FFE901;
+    /* Drop Shadow */
+    box-shadow: 4px 5px 0px 0px #02187E;
+
+    color: #02187E;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%; /* 18.9px */
+    letter-spacing: 2.2px;
+}
 
 @keyframes fadeIn {
     from {
@@ -55,7 +96,7 @@ nav{
 /*  en cada layer cambiamos la velocidad de la animacion    */
 .layer-10{
     background-image: url("../images/primerCielo.png");
-    animation: scroll 30s infinite linear ;
+    animation: scroll 15s infinite linear ;
 }
 
 .layer-9{
