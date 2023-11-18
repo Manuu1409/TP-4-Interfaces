@@ -1,4 +1,4 @@
-let estado = false; 
+/*let estado = false; 
 
 let menuHamburguesa = document.getElementById('menuHamburguesa');
 
@@ -10,3 +10,6 @@ menuHamburguesa.addEventListener('click', function() {
   }
   estado = !estado; 
 });
+*/
+
+
