@@ -16,6 +16,14 @@ header{
     top: 10px;
     z-index: 2;
 }
+header img{
+    width: 133px;
+    height: 68px;
+    position: absolute;
+    margin-top: 6px;
+    left: 600px;
+    top: 0px;
+}
 header svg {
     position: absolute;
     left: 100px;
@@ -25,8 +33,9 @@ header svg {
 header.abajo{
     top: 0px;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.8);    
-    padding: 15px 30px;
+    /*background-color: rgba(255, 255, 255, 0.8);    */
+    background: linear-gradient(180deg, rgba(84, 153, 248, 0.9) 0%, rgba(84, 153, 248, 0.5) 100%);
+    padding-bottom: 20px;
 }
 
 .btnComprar{
@@ -120,7 +129,7 @@ nav{
     width: 374px;
     height: 727.5px;
     margin-top: 115px;
-    margin-left: 908px;
+    margin-left: 905px;
 }
 .layer-6{
     background-image: url("../images/primerChicaSpider.png");
@@ -173,7 +182,7 @@ nav{
     background-image: url("../images/Untitled-5\ 3.png");
     width: 316.659px;
     height: 372.442px;
-    margin-left: 965px;
+    margin-left: 962px;
     margin-top: 385px;
     animation: fadeIn 2s forwards;
 }
@@ -222,4 +231,45 @@ nav{
     width: 751.649px;
     height: 413.131px;
     transform: rotate(-2.222deg);
+}
+
+.seccion-2{
+    width: 1280px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.seccion-2 img{
+    width: 332.96px;
+    height: 302.691px;
+}
+
+.seccion-2 .contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    margin-left: 40px;
+}
+
+.contenedor-1 p{
+    width: 333px;
+    height: 218px; 
+}
+
+.contenedor-2 p{
+    width: 332px;
+    height: 217px;
+}
+
+.contenedor-3 p{
+    width: 333px;
+    height: 189px;
 }
