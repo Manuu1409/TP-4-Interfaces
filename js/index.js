@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const startScroll = 700; // Ajusta este valor al punto en el que quieres que comience el movimiento
+    const scrollFactor = 0.2; // Ajusta este valor para controlar la velocidad de movimiento
+
     const spiderman = document.querySelector('.layer-5');
     const spidermanLimit = 400; // Ajusta este valor al punto en el que deseas detener la animación
   
@@ -13,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const telarana2 = document.querySelector('.layer-1');
     const telaran2aLimit = 400;
+
+    const duendeVerde = document.querySelector('.duendeVerde');
+    const duendeVerdeLimit = 1050;
+
 
     window.addEventListener('scroll', function () {
 
@@ -46,5 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
         telarana2.style.transform = `translateY(${scrollY * 0.2}px)`;
       } 
 
+      if (scrollY >= startScroll && scrollY< duendeVerdeLimit ) {
+        duendeVerde.style.transform = `translateY(${(scrollY - startScroll) * scrollFactor}px) scaleX(-1)`;
+      } 
+
     });
   });
+
+
