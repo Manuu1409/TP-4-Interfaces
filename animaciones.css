@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: grey;
 }
@@ -95,40 +96,63 @@ body {
 
 
 
-.image-2-scroll {
-  height: 30%;
+
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+}
+
+section.contenedor {
+  width: 100%;
+  min-height: 400px;
+  overflow: hidden;
+ /* background-image: url(images/descripcion-imagen-1.png);*/
+  background-repeat: no-repeat;
+  background-position:0 50%;
+  background-attachment: fixed;
+  border-bottom: 1px solid black;
+  background-size:  50%;
 }
 
 
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+section#item1{
+  background-image: url(images/descripcion-imagen-1.png);
 }
 
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px; 
-  position: sticky;
+section#item2{
+  background-image: url(images/descripcion-imagen-2.png);
 }
 
-.item img {
-  width: 700px;
-  height: auto;
+section#item3{
+  background-image: url(images/descripcion-imagen-3.png);
 }
 
-.text {
+section#item4{
+  background-image: url(images/descripcion-imagen-4.png);
+}
+
+
+
+section.text {
+  float: right;
+  width: 50%;
+  min-height: 400px;
+  background-color: rgb(179, 161, 161);
+}
+
+h1.title {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 50px;
+
 }
 
-.text h1 {
-  margin-bottom: 25px;
+p.text{
+  margin: 20px;
+  font-size: 30px;
+  color:white ;
 }
 
-.text p {
-  font-size: 25px;
-}
