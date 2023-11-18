@@ -7,23 +7,27 @@
     box-sizing: border-box;
 }
 body{
-    background-color: red;
-    width: 1280px;
+    background-color: white;
+    max-width: 1280px;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }
 
 @keyframes scroll {   /* es mover el background position de 0 a la posicion que queremos va de 0 a la que queremos continuamente*/
     0% { background-position-x: 117%; }
     100% { background-position-x: 0%; }
-}    
+} 
 
-@keyframes scale{
-    from{
-        scale: 100%;
-    }
-    to{
-        scale: 110%;
-    }
-}
+
+
+
 
 nav{
     width: 100%;
@@ -39,6 +43,13 @@ nav{
     /*animation-name: scroll;
     animation-timing-function: linear;
     animation-iteration-count: infinite;*/
+}
+.layer-6,
+.layer-5,
+.layer-4,
+.layer-2,
+.layer-1 {
+  opacity: 0;
 }
 
 /*  en cada layer cambiamos la velocidad de la animacion    */
@@ -65,7 +76,6 @@ nav{
 
 .layer-7{
     background-image: url("../images/tercerEdificoDerecha.png");
-    animation: scroll 0s infinite linear;
     width: 374px;
     height: 727.5px;
     margin-top: 115px;
@@ -78,6 +88,7 @@ nav{
     height: 444px;
     margin-left: 45px;
     margin-top: 138px;
+    animation: fadeIn 1s forwards;
 }
 .layer-5{
     background-image: url("../images/spiderman.png");
@@ -86,6 +97,8 @@ nav{
     height: 465px;
     margin-left: 380px;
     margin-top: 420px;
+    animation: fadeIn 1s forwards;
+    transition: transform 0.2s ease-out; /* Agregar transición para suavizar el efecto */
 }
 .layer-4{
     background-image: url("../images/spidermanBlack.png");
@@ -94,20 +107,78 @@ nav{
     height: 393px;
     margin-left: 680px;
     margin-top: 350px;
+    animation: fadeIn 1s forwards;
+
 }
 .layer-3{
     background-image: url("../images/LOGO.png");
-    animation-name: scale;
     width: 590px;
     height: 301px;
     margin-left: 345px;
     margin-top: 100px;
-}/*
+
+}
 .layer-2{
-    background-image: url("../images/spidermanBlack.png");
-    animation-name: scale;
-    width: 20%;
-    height: 40%;
-    margin-left: 780px;
-    margin-top: 450px;
-}*/
+    background-image: url("../images/telarañaDerecha.png");
+    width: 450.817px;
+    height: 627.274px;
+    margin-left: -50px;
+    margin-top: 395px;
+    transform: rotate(65.403deg);
+    animation: fadeIn 2s forwards;
+
+}
+.layer-1{
+    background-image: url("../images/Untitled-5\ 3.png");
+    width: 316.659px;
+    height: 372.442px;
+    margin-left: 965px;
+    margin-top: 385px;
+    animation: fadeIn 2s forwards;
+}
+
+.container svg{
+    margin-top: 700px;
+}
+.primerTitulo{
+    width: 646px;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94.5%; /* 56.7px */
+    position: absolute;
+    top: 1000px;
+    left: 60px;
+}
+.primerTexto{
+    width: 586px;
+    height: 154px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 1140px;
+    left: 60px;
+}
+.duendeVerde{
+    position: absolute;
+    transform: scaleX(-1);
+    top: 890px;
+    left: 650px;
+    width: 553px;
+    height: 921px;
+}
+.imagenPrimerTexto{
+    position: absolute;
+    top: 1300px;
+    right: 880px;
+    width: 751.649px;
+    height: 413.131px;
+    transform: rotate(-2.222deg);
+}
