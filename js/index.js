@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const startScroll = 700; // Ajusta este valor al punto en el que quieres que comience el movimiento
-    const scrollFactor = 0.2; // Ajusta este valor para controlar la velocidad de movimiento
+    const scrollFactor = 0.3; // Ajusta este valor para controlar la velocidad de movimiento
 
     const spiderman = document.querySelector('.layer-5');
     const spidermanLimit = 400; // Ajusta este valor al punto en el que deseas detener la animación
@@ -19,6 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const duendeVerde = document.querySelector('.duendeVerde');
     const duendeVerdeLimit = 1050;
+    const startScrollDuende = 800; // Ajusta este valor al punto en el que quieres que comience el movimiento
+
+    const elasticGirl = document.querySelector('.seccion-4-layer-3');
+    const elasticGirlLimit = 3600; 
+    const startScrollelasticGirl = 3150;
+
+    const Pantera = document.querySelector('.seccion-4-layer-2');
+    const PanteraLimit = 3650;
+    const startScrollPantera = 3050; // Ajusta este valor al punto en el que quieres que comience el movimiento
+
+    const Hulk = document.querySelector('.seccion-4-layer-1');
+    const HulkLimit = 3400;
+    const startScrollHulk = 3050; // Ajusta este valor al punto en el que quieres que comience el movimiento
 
 
     window.addEventListener('scroll', function () {
@@ -53,35 +65,25 @@ document.addEventListener('DOMContentLoaded', function () {
         telarana2.style.transform = `translateY(${scrollY * 0.2}px)`;
       } 
 
-      if (scrollY >= startScroll && scrollY< duendeVerdeLimit ) {
-        duendeVerde.style.transform = `translateY(${(scrollY - startScroll) * scrollFactor}px) scaleX(-1)`;
+      if (scrollY >= startScrollDuende && scrollY< duendeVerdeLimit ) {
+        duendeVerde.style.transform = `translateY(${(scrollY - startScrollDuende) * scrollFactor}px) scaleX(-1)`;
       } 
+
+      if (scrollY >= startScrollelasticGirl && scrollY <= elasticGirlLimit) {
+        elasticGirl.style.transform = `translateY(${(scrollY - startScrollelasticGirl) * scrollFactor}px) rotate(-12.483deg)`;
+      }
+
+      if (scrollY >= startScrollPantera && scrollY <= PanteraLimit) {
+        Pantera.style.transform = `translateY(${(scrollY - startScrollPantera) * scrollFactor}px) rotate(13.615deg)`;
+      } 
+
+      if (scrollY >= startScrollHulk && scrollY <= HulkLimit) {
+        console.log("scrollY:", scrollY);
+        console.log("HulkLimit:", HulkLimit);
+        Hulk.style.transform = `translateY(${(scrollY - startScrollHulk) * scrollFactor}px)  rotate(7.515deg)`;
+    } 
 
     });
   });
 
 
-  let counter = document.querySelector('.counter');
-
-  function startCounter() {
-    let count = 0;
-  
-    const interval = setInterval(() => {
-      count++;
-      counter.textContent = count;
-  
-      if (count === 100) {
-        clearInterval(interval);
-        redirectToNewPage();
-      }
-    }, 80);
-  }
-  
-  function redirectToNewPage() {
-    setTimeout(function() {
-      window.location.href = '../html/index.html';
-    }, 1000); 
-  }
-  
-  window.onload = startCounter;
-  

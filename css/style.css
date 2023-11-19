@@ -342,12 +342,15 @@ nav{
 .seccion-4-layer{
     width: 1280px;
     height: 100%;
-    background-size: cover;
-    background-repeat: repeat-x;
+    background-repeat: repeat-x; /*hace que la imagen cuando se 
+                            termina en x se pone devuelta la imagen la pone el browser automaticamente*/
+    animation-name: scrollDos;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
-@keyframes scroll2 {   /* es mover el background position de 0 a la posicion que queremos va de 0 a la que queremos continuamente*/
-    0% { background-position-x:  0%; }
+@keyframes scrollDos {   /* es mover el background position de 0 a la posicion que queremos va de 0 a la que queremos continuamente*/
+    0% { background-position-x: 0%; }
     100% { background-position-x: 100%; }
 } 
 
@@ -358,10 +361,12 @@ nav{
     width: 1077.059px;
     height: 527.626px;
     background-image: url("../images/cieloSeccion-4.png");
-    animation: scroll2 2s infinite linear ;
+    animation: scrollDos 5s infinite linear ;
 }
 
 .seccion-4-layer-5{
+    background-size: cover;
+
     position: absolute;
     top:  3500px;
     margin-left: 100px;
@@ -371,6 +376,8 @@ nav{
 }
 
 .seccion-4-layer-4{
+    background-size: cover;
+
     position: absolute;
     top:  3500px;
     margin-left: 100px;
@@ -379,6 +386,8 @@ nav{
     height: 527.626px;
 }
 .seccion-4-layer-3{
+    background-size: cover;
+
     margin-left: 130px;
     position: absolute;
     top:  3443px;
@@ -389,9 +398,11 @@ nav{
 
 }
 .seccion-4-layer-2{
+    background-size: cover;
+
     position: absolute;
     top:  3300px;
-    margin-left: 55 0px;
+    margin-left: 550px;
     width: 398px;
     height: 552.462px;
     transform: rotate(13.615deg);
@@ -399,8 +410,10 @@ nav{
 
 }
 .seccion-4-layer-1{
+    background-size: cover;
+
     position: absolute;
-    top:  3633px;
+    top:  3533px;
     width: 410.106px;
     height: 437.972px;
     transform: rotate(7.515deg);
@@ -411,7 +424,7 @@ nav{
 
 .tituloSeccion-5{
     position: absolute;
-    top: 4200px;
+    top: 4700px;
     margin-left: 100px;
     width: 802px;
     color: #000;

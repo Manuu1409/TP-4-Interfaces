@@ -16,7 +16,7 @@ function startCounter() {
 
 function redirectToNewPage() {
   setTimeout(function() {
-    window.location.href = 'animaciones.html';
+    window.location.href = '../html/index.html';
   }, 1000); 
 }
 
