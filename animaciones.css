@@ -96,7 +96,7 @@ body {
 
 
 
-
+/*
 
 p {
   font-family: 'Courier New', Courier, monospace;
@@ -107,7 +107,7 @@ section.contenedor {
   width: 100%;
   min-height: 400px;
   overflow: hidden;
- /* background-image: url(images/descripcion-imagen-1.png);*/
+  background-image: url(images/descripcion-imagen-1.png);
   background-repeat: no-repeat;
   background-position:0 50%;
   background-attachment: fixed;
@@ -156,3 +156,69 @@ p.text{
   color:white ;
 }
 
+*/
+
+.datos-juego{
+    display: grid;
+}
+
+.datos-juego h1{
+    
+    font-family: sans-serif;
+    font-size: xx-large
+}
+
+.contenido-datos{
+    position: relative;
+    display: grid;
+    justify-items: center;
+    min-height: 1900px;
+}
+
+.contenido-datos img{
+    top: 10%;
+}
+
+.contenido{
+    display: flex;
+    position: sticky;
+    width: 85%;
+}
+
+.contenido img{
+    position: sticky;
+    height: 300px;
+    width: 550px;
+}
+
+.contenido-texto{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contenidos-textos{
+    margin-top: 10%;
+    position: absolute;
+    grid-gap: 250px;
+    display: grid;
+    flex-direction: column;
+    justify-items: right;
+}
+
+.contenido-texto h2{
+    
+    font-size: xx-large
+   
+}
+
+.contenido-0, .contenido-1, .contenido-2, .contenido-3{
+    visibility: hidden;
+    position: absolute;
+}
+
+.mostrar-imagen{
+    position: sticky;
+    visibility: visible;
+    
+}

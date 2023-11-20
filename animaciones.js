@@ -12,30 +12,38 @@ menuHamburguesa.addEventListener('click', function() {
 });
 */
 
+//selecciono cada clase y lo almaceno
+let game_1 = document.querySelector(".contenido-0");
+let game_2 = document.querySelector(".contenido-1");
+let game_3 = document.querySelector(".contenido-2");
+let game_4 = document.querySelector(".contenido-3");
 
-// Función para mostrar la imagen de fondo cuando se termina de desplazar una sección de texto
-function showBackgroundImage() {
-  const sections = document.querySelectorAll('.contenedor');
 
-  sections.forEach((section, index) => {
-    const rect = section.getBoundingClientRect();
-    const text = section.querySelector('.text');
-
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      if (text.getBoundingClientRect().bottom <= window.innerHeight) {
-        // Ocultar todas las imágenes de fondo
-        sections.forEach((s) => {
-          s.style.backgroundImage = 'none';
-        });
-        // Mostrar la imagen de fondo de la sección visible
-        section.style.backgroundImage = `url('images/descripcion-imagen-${index + 1}.png')`;
-      }
-    }
-  });
+window.addEventListener("scroll", () => {  //listener cuando me desplazo por la pagina
+  let seccion = document.querySelector(".datos-juego");
+  const seccionY = seccion.getBoundingClientRect().y; //pos vertical 
+  let value = seccionY; //almaceno la pos vertical
+  console.log(value) //imprimo
+  if(value >= -200 && value <= 300){ //rangos de pos vertical y muestra o remueve las classlist
+    
+      game_1.classList.add("mostrar-imagen");
+      game_2.classList.remove("mostrar-imagen");
+  } 
+  
+  else if(value >= -900 && value <= -201){
+      game_1.classList.remove("mostrar-imagen")
+      game_2.classList.add("mostrar-imagen")
+      game_3.classList.remove("mostrar-imagen")
+  }
+  
+  else if(value >= -1300 && value <= -901){
+    game_2.classList.remove("mostrar-imagen")
+    game_3.classList.add("mostrar-imagen")
+    game_4.classList.remove("mostrar-imagen")
 }
 
-// Asignar el evento scroll para llamar a la función showBackgroundImage
-window.addEventListener('scroll', showBackgroundImage);
-
-// Llamar a showBackgroundImage inicialmente para establecer la imagen de fondo al cargar la página
-showBackgroundImage();
+  else if(value >= -1600 && value <= -1301){
+    game_3.classList.remove("mostrar-imagen")
+    game_4.classList.add("mostrar-imagen")
+}
+});
