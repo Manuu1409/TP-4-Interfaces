@@ -158,6 +158,10 @@ p.text{
 
 */
 
+
+/* ---------------imagenes scroll ----------------*/
+
+
 .datos-juego{
     display: grid;
 }
@@ -222,3 +226,53 @@ p.text{
     visibility: visible;
     
 }
+
+
+
+/* ---------------menu hamburguesa ----------------*/
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  gap: 10px;
+}
+
+.drop-menu {
+  display: none;
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+}
+
+.stick-1, .stick-2, .stick-3{
+  background-color: yellow;
+  height: 6px; /*ancho del palo*/
+  width: 100%;
+  border: 4px solid skyblue;
+  border-radius: 15px;
+  transition: all .5s;
+  transform-origin:left ;
+
+}
+
+.menu.active .stick-1 {
+  transform: rotate(50deg);
+}
+
+.menu.active .stick-2 {
+  opacity: 0;
+}
+
+.menu.active .stick-3 {
+  transform: rotate(-50deg);
+}
+

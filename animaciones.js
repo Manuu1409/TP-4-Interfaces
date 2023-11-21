@@ -47,3 +47,16 @@ window.addEventListener("scroll", () => {  //listener cuando me desplazo por la 
     game_4.classList.add("mostrar-imagen")
 }
 });
+
+
+
+
+
+
+const menuButton = document.querySelector('.menu');
+const dropMenu = document.querySelector('.drop-menu');
+
+menuButton.addEventListener('click', function() {
+  dropMenu.classList.toggle('visible');
+  menuButton.classList.toggle('active');
+});
