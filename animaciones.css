@@ -276,3 +276,43 @@ p.text{
   transform: rotate(-50deg);
 }
 
+
+
+/* ---------------spiderman sprite sheet ----------------*/
+
+.container {
+  width: 75px; /* Ancho de un solo frame */
+  height: 300px;
+  position: absolute;
+  background: url(images/spiderman-Spritesheet.png) repeat-x;
+  animation: move 1s steps(11) infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -825px 0; /* 75px * 11 frames */
+  }
+}
+
+
+.container-2 {
+  width: 70px; /* Ancho de un solo frame */
+  height: 200px;
+  position: absolute;
+  background: url(images/spiderman-Spritesheet-2.png) repeat-x;
+  animation: move2 1.5s steps(11) infinite;
+}
+
+@keyframes move2 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -902px 0;
+  }
+}
