@@ -20,17 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const duendeVerdeLimit = 1050;
     const startScrollDuende = 800; // Ajusta este valor al punto en el que quieres que comience el movimiento
 
-    const elasticGirl = document.querySelector('.seccion-4-layer-3');
-    const elasticGirlLimit = 3600; 
-    const startScrollelasticGirl = 3150;
+    let flexCard01 = document.querySelector('.contenedor-1');
+    let flexCard02 = document.querySelector('.contenedor-2');
+    let flexCard03 = document.querySelector('.contenedor-3');
 
-    const Pantera = document.querySelector('.seccion-4-layer-2');
-    const PanteraLimit = 3650;
-    const startScrollPantera = 3050; // Ajusta este valor al punto en el que quieres que comience el movimiento
-
-    const Hulk = document.querySelector('.seccion-4-layer-1');
-    const HulkLimit = 3400;
-    const startScrollHulk = 3050; // Ajusta este valor al punto en el que quieres que comience el movimiento
+    
 
 
     window.addEventListener('scroll', function () {
@@ -78,21 +72,52 @@ document.addEventListener('DOMContentLoaded', function () {
         duendeVerde.style.transform = `translateY(${(scrollY - startScrollDuende) * scrollFactor}px) scaleX(-1)`;
       } 
 
-      if (scrollY >= startScrollelasticGirl && scrollY <= elasticGirlLimit) {
-        elasticGirl.style.transform = `translateY(${(scrollY - startScrollelasticGirl) * scrollFactor}px) rotate(-12.483deg)`;
+
+      if(window.scrollY > 1250){
+        setTimeout(()=>{
+            flexCard01.classList.add("showUp");
+        },0);
+        setTimeout(()=>{
+            flexCard02.classList.add("showUp");
+        },150);
+        setTimeout(()=>{
+            flexCard03.classList.add("showUp");
+        },400);        
+      } else {
+          flexCard01.classList.remove("showUp");
+          flexCard02.classList.remove("showUp");
+          flexCard03.classList.remove("showUp");
       }
 
-      if (scrollY >= startScrollPantera && scrollY <= PanteraLimit) {
-        Pantera.style.transform = `translateY(${(scrollY - startScrollPantera) * scrollFactor}px) rotate(13.615deg)`;
-      } 
+      
 
-      if (scrollY >= startScrollHulk && scrollY <= HulkLimit) {
-        console.log("scrollY:", scrollY);
-        console.log("HulkLimit:", HulkLimit);
-        Hulk.style.transform = `translateY(${(scrollY - startScrollHulk) * scrollFactor}px)  rotate(7.515deg)`;
-    } 
+
 
     });
   });
 
+  (function() {
+    // Add event listener
+    document.addEventListener("mousemove", parallax);
+    const elem1 = document.querySelector('.seccion-4-layer-1');
+    const elem2 = document.querySelector('.seccion-4-layer-2');
+    const elem3 = document.querySelector('.seccion-4-layer-3');
 
+    // Magic happens here
+    function parallax(e) {
+        let _w = window.innerWidth/2;
+        let _h = window.innerHeight/2;
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+        let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+        let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+        let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+        let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+        console.log(x);
+        elem1.style.backgroundPosition = x;
+        elem2.style.backgroundPosition = x;
+        elem3.style.backgroundPosition = x;
+
+    }
+
+})();
