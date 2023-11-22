@@ -34,13 +34,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     window.addEventListener('scroll', function () {
+      let logo = document.querySelector('.layer-3');
 
-        var header = document.querySelector("header")
-        header.classList.toggle("abajo",window.scrollY>0)  //cuando la haga scroll y el valor sea mayor a 0
+      var header = document.querySelector("header")
+      header.classList.toggle("abajo",window.scrollY>0)  //cuando la haga scroll y el valor sea mayor a 0
 
       // Obtener el desplazamiento vertical de la página
       const scrollY = window.scrollY || window.pageYOffset;
-        
+      
+      
+      // Agregar la clase 'small' cuando el desplazamiento es mayor que 200px
+      if (window.scrollY > 20) {
+          logo.classList.add("small");
+      } else {
+          logo.classList.remove("small");
+      }
+
       // Ajustar la posición vertical de Spiderman dentro del rango especificado
       if (scrollY <= spidermanLimit) {
         spiderman.style.transform = `translateY(${scrollY * 0.2}px)`;

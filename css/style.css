@@ -5,6 +5,8 @@
     list-style: none;
     outline: none;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
 }
 html{
     height: 1000px;
@@ -12,6 +14,8 @@ html{
 body{
     background-color: white;
     max-width: 1280px;
+    margin: auto;
+    
 }
 header{
     width: 1280px;
@@ -26,6 +30,7 @@ header img{
     left: 600px;
     top: 0px;
     padding-top: 10px;
+    opacity: 0;
 
 }
 header svg {
@@ -58,7 +63,6 @@ header.abajo{
     box-shadow: 4px 5px 0px 0px #02187E;
 
     color: #02187E;
-    font-family: Lato;
     font-size: 20px;
     font-style: normal;
     font-weight: 900;
@@ -141,8 +145,8 @@ nav{
     animation-name: scale;
     width: 360px;
     height: 444px;
-    margin-left: 45px;
-    margin-top: 138px;
+    margin-left: 95px;
+    margin-top: 338px;
     animation: fadeIn 1s forwards;
 }
 .layer-5{
@@ -171,8 +175,21 @@ nav{
     height: 301px;
     margin-left: 345px;
     margin-top: 100px;
+    transition: width 0.4s;
+}
+
+.layer-3.small {
+    position: fixed;
+    left: 200px;
+    top: -90px;
+    padding-top: 10px;
+    width: 133px;
+    height: 68px;
+    padding-bottom: 20px;
+    z-index: 99999;
 
 }
+
 .layer-2{
     background-image: url("../images/telarañaDerecha.png");
     width: 450.817px;
@@ -198,7 +215,6 @@ nav{
 .primerTitulo{
     width: 646px;
     color: #FFF;
-    font-family: Lato;
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
@@ -212,7 +228,6 @@ nav{
     height: 154px;
     flex-shrink: 0;
     color: #FFF;
-    font-family: Lato;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -244,7 +259,6 @@ nav{
     justify-items: center;
     justify-content: center;
     margin-top: 120px;
-    font-family: Lato;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -333,7 +347,7 @@ nav{
     top:  3250px;
     left: 100px;
     width: 667px;
-    color: #FFF;    font-family: Lato;
+    color: #FFF;   
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
@@ -428,7 +442,6 @@ nav{
     margin-left: 100px;
     width: 802px;
     color: #000;
-    font-family: Lato;
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
