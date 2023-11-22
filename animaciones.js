@@ -58,5 +58,19 @@ const dropMenu = document.querySelector('.drop-menu');
 
 menuButton.addEventListener('click', function() {
   dropMenu.classList.toggle('visible');
-  menuButton.classList.toggle('active');
+  const navListItems = document.querySelectorAll('.nav-list li');
+
+  // reset al hacer click
+  navListItems.forEach(item => {
+    item.style.opacity = 0;
+  });
+
+  // li con delay
+  let delay = 0;
+  navListItems.forEach(item => {
+    setTimeout(() => {
+      item.style.opacity = 1;
+    }, delay * 1000); // milisegundos a mostrar
+    delay += 0.2; // retraso de cada li escalado
+  });
 });
