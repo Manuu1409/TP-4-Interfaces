@@ -231,6 +231,9 @@ p.text{
 
 /* ---------------menu hamburguesa ----------------*/
 
+
+
+/* CSS */
 .menu {
   display: flex;
   flex-direction: column;
@@ -243,15 +246,43 @@ p.text{
 .drop-menu {
   display: none;
   width: 200px;
-  height: 200px;
-  background-color: lightblue;
-  
+  height: 350px;
+  background-color: rgb(255, 255, 76);
+  transition: opacity 0.5s ease-in-out; 
+  opacity: 0; 
 }
 
 .visible {
   display: block;
   opacity: 1;
 }
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+/* Aplicar retraso gradual a cada elemento li */
+.nav-list li {
+  margin-bottom: 50px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: skyblue;
+}
+
+li:hover{
+  color: black;
+}
+
+ul {
+  border: 2px solid black;
+}
+
+
+/* animacion*/
+
 
 .stick-1, .stick-2, .stick-3{
   background-color: yellow;
@@ -298,7 +329,7 @@ p.text{
   }
 }
 
-
+/* para el width , ancho de la imagen por la cantidad de img */
 .container-2 {
   width: 70px; /* Ancho de un solo frame */
   height: 200px;
@@ -313,6 +344,6 @@ p.text{
   }
 
   100% {
-    background-position: -902px 0;
+    background-position: -902px 0; /* ancho de la img */
   }
 }
