@@ -8,14 +8,11 @@
     font-family: 'Lato', sans-serif;
 
 }
-html{
-    height: 1000px;
-}
+
 body{
     background-color: white;
     max-width: 1280px;
     margin: auto;
-    
 }
 header{
     width: 1280px;
@@ -62,17 +59,28 @@ header.abajo{
 }
 
 @keyframes fadeIn {
-    from {
-      opacity: 0;
+    0% {
+        opacity:0;
+        translate:0 -10vh;
     }
-    to {
-      opacity: 1;
+    25% {
+        opacity: 0.45;
+    }
+    50%{ 
+        opacity: 0.75;
+    }
+    75% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+        translate:0 0vh;
     }
 }
 
 @keyframes scroll {   /* es mover el background position de 0 a la posicion que queremos va de 0 a la que queremos continuamente*/
     0% { background-position-x:  0%; }
-    100% { background-position-x: 500%; }
+    100% { background-position-x: 200%; }
 } 
 
 
@@ -80,19 +88,18 @@ header.abajo{
 
 
 nav{
-    width: 100%;
+    position: absolute;
+    width: 1280px;
+    height: 1100px;
+    background-color: #8F6AA6;
+    overflow: hidden;
+
 }
 /*  TDDOS LOS LAYER DEBEN TENRE UNA PROPIEDAD EN COMUN  */
 .layer{
-    width: 1280px;
-    height: 100%;
     position: absolute;
     background-size: cover;
-    background-repeat: repeat-x; /*hace que la imagen cuando se 
-                            termina en x se pone devuelta la imagen la pone el browser automaticamente*/
-    animation-name: scroll;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    background-repeat: repeat-x;
 }
 .layer-6,
 .layer-5,
@@ -104,31 +111,38 @@ nav{
 
 /*  en cada layer cambiamos la velocidad de la animacion    */
 .layer-10{
+    position: absolute;
     background-image: url("../images/primerCielo.png");
     animation: scroll 10s infinite linear ;
+    width: 1280px;
+    height: 1010px;
+    background-repeat: repeat-x; /*hace que la imagen cuando se 
+                            termina en x se pone devuelta la imagen la pone el browser automaticamente*/
 }
 
 .layer-9{
     background-image: url("../images/primerEdificio.png");
     width: 543.5px;
     height: 213.5px;
-    margin-top: 615px;
-    margin-left: 380px;
+    margin-top: 596px;
+    margin-left: 398px;
+    background-size: cover;
+
 }
 
 .layer-8{
     background-image: url("../images/segundoEdificioIzquierda.png");
-    margin-top: 134px;
+    margin-top: 117px;
     width: 452px;
     height: 720px;
-    margin-left: -53px;
+    margin-left: -52px;
 }
 
 .layer-7{
     background-image: url("../images/tercerEdificoDerecha.png");
     width: 374px;
     height: 727.5px;
-    margin-top: 115px;
+    margin-top: 98px;
     margin-left: 905px;
 }
 .layer-6{
@@ -138,7 +152,9 @@ nav{
     height: 444px;
     margin-left: 95px;
     margin-top: 338px;
-    animation: fadeIn 1s forwards;
+    animation: fadeIn ease .8s forwards;
+    z-index: 2;
+
 }
 .layer-5{
     background-image: url("../images/spiderman.png");
@@ -149,6 +165,8 @@ nav{
     margin-top: 420px;
     animation: fadeIn 1s forwards;
     transition: transform 0.2s ease-out; /* Agregar transición para suavizar el efecto */
+    z-index: 2;
+
 }
 .layer-4{
     background-image: url("../images/spidermanBlack.png");
@@ -158,6 +176,7 @@ nav{
     margin-left: 680px;
     margin-top: 350px;
     animation: fadeIn 1s forwards;
+    z-index: 2;
 
 }
 .layer-3{
@@ -190,6 +209,7 @@ nav{
     margin-top: 395px;
     transform: rotate(65.403deg);
     animation: fadeIn 2s forwards;
+    z-index: 2;
 
 }
 .layer-1{
@@ -199,19 +219,24 @@ nav{
     margin-left: 962px;
     margin-top: 385px;
     animation: fadeIn 2s forwards;
+    z-index: 2;
 }
 
+.container{
+    position: absolute;
+    z-index: 1;
+}
 .container svg{
     margin-top: 700px;
 }
 .primerTitulo{
+    position: absolute;
     width: 646px;
     color: #FFF;
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
     line-height: 94.5%; /* 56.7px */
-    position: absolute;
     top: 1000px;
     left: 60px;
 }
@@ -238,7 +263,7 @@ nav{
 }
 .imagenPrimerTexto{
     position: absolute;
-    top: 1320px;
+    top: 1300px;
     right: 470px;
     width: 751.649px;
     height: 413.131px;
