@@ -55,22 +55,15 @@ window.addEventListener("scroll", () => {  //listener cuando me desplazo por la 
 
 const menuButton = document.querySelector('.menu');
 const dropMenu = document.querySelector('.drop-menu');
+const navListItems = document.querySelectorAll('.nav-list li');
 
 menuButton.addEventListener('click', function() {
   dropMenu.classList.toggle('visible');
-  const navListItems = document.querySelectorAll('.nav-list li');
+  menuButton.classList.toggle('active');
 
-  // reset al hacer click
-  navListItems.forEach(item => {
-    item.style.opacity = 0;
-  });
-
-  // li con delay
-  let delay = 0;
-  navListItems.forEach(item => {
-    setTimeout(() => {
-      item.style.opacity = 1;
-    }, delay * 1000); // milisegundos a mostrar
-    delay += 0.2; // retraso de cada li escalado
-  });
+  if (dropMenu.classList.contains('visible')) {
+    navListItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 200}ms`; // retraso de los LI
+    });
+  }
 });

@@ -232,8 +232,6 @@ p.text{
 /* ---------------menu hamburguesa ----------------*/
 
 
-
-/* CSS */
 .menu {
   display: flex;
   flex-direction: column;
@@ -246,10 +244,13 @@ p.text{
 .drop-menu {
   display: none;
   width: 200px;
-  height: 350px;
+  height: 400px;
   background-color: rgb(255, 255, 76);
   transition: opacity 0.5s ease-in-out; 
-  opacity: 0; 
+  opacity: 0;
+  position: absolute;
+  z-index: 999; /* menú por encima del contenido */
+  border: 2px solid black;
 }
 
 .visible {
@@ -264,20 +265,35 @@ p.text{
   font-size: 1.5rem;
 }
 
-/* Aplicar retraso gradual a cada elemento li */
+/* retraso gradual a cada elemento li */
 .nav-list li {
+  list-style: none; /*para que no esten los puntos*/
   margin-bottom: 50px;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  color: skyblue;
+  transform: translateX(-100%);
+  animation: slide 0.7s forwards;
 }
+
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
 
 li:hover{
   color: black;
 }
 
 ul {
-  border: 2px solid black;
+  
 }
 
 
@@ -312,11 +328,11 @@ ul {
 /* ---------------spiderman sprite sheet ----------------*/
 
 .container {
-  width: 75px; /* Ancho de un solo frame */
+  width: 69px; /* Ancho de un solo frame */
   height: 300px;
   position: absolute;
-  background: url(images/spiderman-Spritesheet.png) repeat-x;
-  animation: move 1s steps(11) infinite;
+  background: url(images/spiderman-Spritesheet-4.png) repeat-x;
+  animation: move 1s steps(7) infinite;
 }
 
 @keyframes move {
@@ -325,17 +341,16 @@ ul {
   }
 
   100% {
-    background-position: -825px 0; /* 75px * 11 frames */
+    background-position: -759px 0;
   }
 }
 
-/* para el width , ancho de la imagen por la cantidad de img */
 .container-2 {
-  width: 70px; /* Ancho de un solo frame */
+  width: 55px;
   height: 200px;
   position: absolute;
-  background: url(images/spiderman-Spritesheet-2.png) repeat-x;
-  animation: move2 1.5s steps(11) infinite;
+  background: url(images/spiderman-Spritesheet-5.png) repeat-x;
+  animation: move2 3s steps(11) infinite;
 }
 
 @keyframes move2 {
@@ -344,6 +359,36 @@ ul {
   }
 
   100% {
-    background-position: -902px 0; /* ancho de la img */
+    background-position: -759px 0; /* 75px * 11 frames */
   }
 }
+
+
+
+/* para el width , ancho de la imagen por la cantidad de img */
+.container-3 {
+  width: 77px; /* Ancho de un solo frame */
+  height: 200px;
+  position: absolute;
+  background: url(images/spiderman-Spritesheet-3.png) repeat-x;
+  animation: move3 1.5s steps(11) infinite;
+}
+
+@keyframes move3 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -847px 0; /* ancho de la img */
+  }
+}
+
+
+
+
+
+
+
+
+
