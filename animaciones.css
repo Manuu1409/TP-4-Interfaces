@@ -236,9 +236,8 @@ p.text{
   display: flex;
   flex-direction: column;
   width: 70px;
-  height: 70px;
-  background-color: black;
-  gap: 10px;
+  height: 50px;
+  background-color: blue;
 }
 
 .drop-menu {
@@ -304,15 +303,17 @@ ul {
   background-color: yellow;
   height: 6px; /*ancho del palo*/
   width: 100%;
-  border: 4px solid skyblue;
+  border: 4px solid #2981FF;
   border-radius: 15px;
   transition: all .5s;
-  transform-origin:left ;
+  transform-origin:left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
+  margin-left: -4px;
 
 }
 
 .menu.active .stick-1 {
-  transform: rotate(50deg);
+  transform: rotate(28deg);
 }
 
 .menu.active .stick-2 {
@@ -320,19 +321,21 @@ ul {
 }
 
 .menu.active .stick-3 {
-  transform: rotate(-50deg);
+  transform: rotate(-28deg);
 }
 
 
 
 /* ---------------spiderman sprite sheet ----------------*/
 
+
 .container {
   width: 69px; /* Ancho de un solo frame */
   height: 300px;
   position: absolute;
   background: url(images/spiderman-Spritesheet-4.png) repeat-x;
-  animation: move 1s steps(7) infinite;
+  animation: move 2s steps(7) infinite;
+  margin-top: 50px;
 }
 
 @keyframes move {
@@ -346,11 +349,13 @@ ul {
 }
 
 .container-2 {
-  width: 55px;
-  height: 200px;
+  width: 146px;
+  height: 150px;
   position: absolute;
-  background: url(images/spiderman-Spritesheet-5.png) repeat-x;
-  animation: move2 3s steps(11) infinite;
+  background: url(images/venom-spritesheet.png) repeat-x;
+  animation: move2 2s steps(7) infinite;
+  margin-left: 90px;
+  
 }
 
 @keyframes move2 {
@@ -359,7 +364,7 @@ ul {
   }
 
   100% {
-    background-position: -759px 0; /* 75px * 11 frames */
+    background-position: -1148px 0; 
   }
 }
 
@@ -367,11 +372,12 @@ ul {
 
 /* para el width , ancho de la imagen por la cantidad de img */
 .container-3 {
-  width: 77px; /* Ancho de un solo frame */
+  width: 69px; /* Ancho de un solo frame */
   height: 200px;
   position: absolute;
   background: url(images/spiderman-Spritesheet-3.png) repeat-x;
   animation: move3 1.5s steps(11) infinite;
+  margin-left: 170px;
 }
 
 @keyframes move3 {
@@ -385,6 +391,23 @@ ul {
 }
 
 
+.container-4 {
+  width: 120px; /* Ancho de un solo frame */
+  height: 200px;
+  position: absolute;
+  background: url(images/venom-spritesheet-2.png) repeat-x;
+  animation: move3 1.5s steps(8) infinite;
+}
+
+@keyframes move3 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1600px 0; /* ancho de la img */
+  }
+}
 
 
 
@@ -392,3 +415,23 @@ ul {
 
 
 
+
+/* layer con sprite sheet  */
+
+.layer-cloud {
+  position: relative;
+  width: 1280px;
+  height: 1296px;
+  background-image: url(images/cielo.png);
+  background-size: cover;
+}
+
+.layer-building {
+  position: absolute;
+  top: 3600px;
+  width: 1280px;
+  height: 720px;
+  background-image: url(images/edificios.png);
+  background-size: cover;
+
+}
