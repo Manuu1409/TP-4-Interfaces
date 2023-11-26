@@ -326,47 +326,6 @@ ul {
 
 
 
-/* ---------------spiderman sprite sheet ----------------*/
-
-
-.container {
-  width: 69px; /* Ancho de un solo frame */
-  height: 300px;
-  position: absolute;
-  background: url(images/spiderman-Spritesheet-4.png) repeat-x;
-  animation: move 2s steps(7) infinite;
-  margin-top: 50px;
-}
-
-@keyframes move {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: -759px 0;
-  }
-}
-
-.container-2 {
-  width: 146px;
-  height: 150px;
-  position: absolute;
-  background: url(images/venom-spritesheet.png) repeat-x;
-  animation: move2 2s steps(7) infinite;
-  margin-left: 90px;
-  
-}
-
-@keyframes move2 {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: -1148px 0; 
-  }
-}
 
 
 
@@ -416,10 +375,17 @@ ul {
 
 
 
-/* layer con sprite sheet  */
+/* layer nubes y edificios */
+
+
+.layer-cloud, .layer-building {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .layer-cloud {
-  position: relative;
   width: 1280px;
   height: 1296px;
   background-image: url(images/cielo.png);
@@ -427,11 +393,194 @@ ul {
 }
 
 .layer-building {
-  position: absolute;
-  top: 3600px;
   width: 1280px;
   height: 720px;
+  margin-top: 290px;
   background-image: url(images/edificios.png);
   background-size: cover;
+}
 
+
+
+/* layer plataformas */
+
+
+.layer-background, .layer-plataforms {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 690px;
+}
+
+.layer-background {
+  width: 1280px;
+  height: 80px;
+  background-image: url(images/fondo-plataforma.png);
+}
+
+.layer-plataforms {
+  width: 1280px;
+  height: 75px;
+  background-image: url(images/plataformas.png);
+  background-repeat: no-repeat;
+  margin-left: 90px;
+}
+
+/* titulo */
+.title-spidey {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  width: 80%;
+
+}
+.title-spidey span {
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+  display: block; /* una linea abajo de otra */
+}
+
+/* buscador */
+.container-search {
+  display: flex;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.search-1 {
+  width: 562px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 50px 0px 0px 50px;
+  border-top: 9px solid #2982FF;
+  border-bottom: 9px solid #2982FF;
+  border-left: 9px solid #2982FF;
+  background: #FFF;
+  box-shadow: 4px 5px 0px 0px #02187E;
+  margin-right: 0px;
+  z-index: 1;
+  
+}
+
+.search-2 {
+  width: 218px;
+  height: 100px;
+  border-radius: 0px 50px 50px 0px;
+  border: 9px solid #2982FF;
+  background: #FFE901;
+  box-shadow: 4px 5px 0px 0px #02187E;
+  color: #02187E;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* texto contacto */
+.contact {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  width: 80%;
+}
+
+.contact span {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  display: block;
+}
+
+
+/* img edad */
+.age {
+  height: 145px;
+  width: 231px;
+}
+
+.container-age {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 1;
+}
+
+
+
+/* ---------------spiderman sprite sheet ----------------*/
+
+
+.container {
+  width: 75px; /* Ancho de un solo frame */
+  height: 70px;
+  position: absolute;
+  top: 78%;
+  left: 64%;
+  background: url(images/spiderman-Spritesheet-4.png) repeat-x;
+  animation: move 2s steps(7) infinite;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -759px 0;
+  }
+}
+
+.container-2 {
+  width: 146px;
+  height: 140px;
+  position: absolute;
+  top: 76%;
+  left: 66%;
+  background: url(images/venom-spritesheet.png) repeat-x;
+  animation: move2 2s steps(7) infinite;
+  margin-left: 65px;
+  z-index: 1;
+  
+}
+
+@keyframes move2 {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -1148px 0; 
+  }
+}
+
+
+
+footer {
+  height: 598px;
+  width: 1280px;
+  background-color: #5E5E5D;
+  position: absolute;
+  left: 16.4%;
+  margin-top: 66px;
+}
+
+.text-footer {
+  color: white;
+  font-size: x-large;
+  margin-left: 90px;
+  margin-right: 280px;
+}
+
+.networks {
+  height: 41px;
+  width: 212px;
 }
