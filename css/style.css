@@ -633,6 +633,8 @@ nav{
     left: 200px;
     width: 268px;
     height: 416.5px;
+    opacity: 1;
+    
 }
 .svg-chicaSpider-seccion-7{
     position: absolute;
@@ -703,7 +705,3 @@ nav{
 
 }
 
-
-.chicaSpider-seccion-7:hover + .svg-barraSuperior-chicaSpider-seccion-7{
-    opacity: 1;
-}

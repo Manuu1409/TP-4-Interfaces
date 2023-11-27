@@ -160,14 +160,96 @@ window.addEventListener("scroll", () => {  //listener cuando me desplazo por la 
 });
 
 
+  // Obtén el elemento que se hace hover
+const blackSpiderSpiderHover = document.querySelector('.blackSpider-seccion-7');
 
+// Obtén los otros elementos que deseas afectar
+const barraSuperiorBlackSpider = document.querySelector('.svg-barraSuperior-blackSpider-seccion-7');
+const barraInferiorBlackSpider = document.querySelector('.svg-barraInferior-blackSpider-seccion-7');
+const fondoBlackSpider = document.querySelector('.svg-blackSpider-seccion-7');
 
-
-
-const menuButton = document.querySelector('.menu');
-const dropMenu = document.querySelector('.drop-menu');
-
-menuButton.addEventListener('click', function() {
-  dropMenu.classList.toggle('visible');
-  menuButton.classList.toggle('active');
+// Agrega un evento de hover al elemento
+blackSpiderSpiderHover.addEventListener('mouseover', () => {
+  // Aplica estilos a otros elementos cuando 'elementoHover' está en hover
+  barraSuperiorBlackSpider.style.opacity = 1;
+  barraInferiorBlackSpider.style.opacity = 1;
+  fondoBlackSpider.style.opacity = 1;
+  SpiderHover.style.filter = 'blur(5px)'
+  ChicaSpiderSpiderHover.style.filter = 'blur(5px)'
 });
+
+// Elimina los estilos cuando se sale del hover
+blackSpiderSpiderHover.addEventListener('mouseout', () => {
+  barraSuperiorBlackSpider.style.opacity = 0;
+  barraInferiorBlackSpider.style.opacity = 0;
+  fondoBlackSpider.style.opacity = 0;
+  SpiderHover.style.filter = 'blur(0px)'
+  ChicaSpiderSpiderHover.style.filter = 'blur(0px)'
+});
+
+
+const SpiderHover = document.querySelector('.SpiderMan-seccion-7');
+
+// Obtén los otros elementos que deseas afectar
+const barraSuperiorSpider = document.querySelector('.svg-barraSuperior-SpiderMan-seccion-7');
+const barraInferiorSpider = document.querySelector('.svg-barraInferior-SpiderMan-seccion-7');
+const fondoSpider = document.querySelector('.svg-SpiderMan-seccion-7');
+
+// Agrega un evento de hover al elemento
+SpiderHover.addEventListener('mouseover', () => {
+  // Aplica estilos a otros elementos cuando 'elementoHover' está en hover
+  barraSuperiorSpider.style.opacity = 1;
+  barraInferiorSpider.style.opacity = 1;
+  fondoSpider.style.opacity = 1;
+  blackSpiderSpiderHover.style.filter = 'blur(5px)'
+  ChicaSpiderSpiderHover.style.filter = 'blur(5px)'
+});
+
+// Elimina los estilos cuando se sale del hover
+SpiderHover.addEventListener('mouseout', () => {
+  barraSuperiorSpider.style.opacity = 0;
+  barraInferiorSpider.style.opacity = 0;
+  fondoSpider.style.opacity = 0;
+  blackSpiderSpiderHover.style.filter = 'blur(0px)'
+  ChicaSpiderSpiderHover.style.filter = 'blur(0px)'
+});
+
+
+
+  // Obtén el elemento que se hace hover
+  const ChicaSpiderSpiderHover = document.querySelector('.chicaSpider-seccion-7');
+
+  // Obtén los otros elementos que deseas afectar
+  const barraSuperiorChicaSpider = document.querySelector('.svg-barraSuperior-chicaSpider-seccion-7');
+  const barraInferiorChicaSpider = document.querySelector('.svg-barraInferior-chicaSpider-seccion-7');
+  const fondoChicaSpider = document.querySelector('.svg-chicaSpider-seccion-7');
+  
+  // Agrega un evento de hover al elemento
+  ChicaSpiderSpiderHover.addEventListener('mouseover', () => {
+    // Aplica estilos a otros elementos cuando 'elementoHover' está en hover
+    barraSuperiorChicaSpider.style.opacity = 1;
+    barraInferiorChicaSpider.style.opacity = 1;
+    fondoChicaSpider.style.opacity = 1;
+    SpiderHover.style.filter = 'blur(5px)'
+    blackSpiderSpiderHover.style.filter = 'blur(5px)'
+
+  });
+  
+  // Elimina los estilos cuando se sale del hover
+  ChicaSpiderSpiderHover.addEventListener('mouseout', () => {
+    barraSuperiorChicaSpider.style.opacity = 0;
+    barraInferiorChicaSpider.style.opacity = 0;
+    fondoChicaSpider.style.opacity = 0;
+    SpiderHover.style.filter = 'blur(0px)'
+    blackSpiderSpiderHover.style.filter = 'blur(0px)'
+  });
+
+
+
+// const menuButton = document.querySelector('.menu');
+// const dropMenu = document.querySelector('.drop-menu');
+
+// menuButton.addEventListener('click', function() {
+//   dropMenu.classList.toggle('visible');
+//   menuButton.classList.toggle('active');
+// });
