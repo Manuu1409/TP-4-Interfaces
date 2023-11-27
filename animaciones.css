@@ -524,7 +524,7 @@ ul {
   top: 78%;
   left: 64%;
   background: url(images/spiderman-Spritesheet-4.png) repeat-x;
-  animation: move 2s steps(7) infinite;
+  animation: move 3s steps(7) infinite;
   margin-top: 50px;
   z-index: 1;
 }
@@ -540,13 +540,13 @@ ul {
 }
 
 .container-2 {
-  width: 146px;
-  height: 140px;
+  width: 80px;
+  height: 110px;
   position: absolute;
   top: 76%;
   left: 66%;
-  background: url(images/venom-spritesheet.png) repeat-x;
-  animation: move2 2s steps(7) infinite;
+  background: url(images/spiderman-spritesheet-7.png) repeat-x;
+  animation: move2 2s steps(12) infinite;
   margin-left: 65px;
   z-index: 1;
   
@@ -558,7 +558,7 @@ ul {
   }
 
   100% {
-    background-position: -1148px 0; 
+    background-position: -960px 0;
   }
 }
 
