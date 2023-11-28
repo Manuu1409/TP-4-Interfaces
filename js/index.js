@@ -41,7 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var header = document.querySelector("header")
       header.classList.toggle("abajo",window.scrollY>0)  //cuando la haga scroll y el valor sea mayor a 0
-
+      
+      var dropMenu = document.querySelector(".drop-menu")
+      dropMenu.classList.toggle("abajo2",window.scrollY>0) 
+      
       // Obtener el desplazamiento vertical de la página
       const scrollY = window.scrollY || window.pageYOffset;
       
@@ -298,10 +301,17 @@ SpiderHover.addEventListener('mouseout', () => {
 
 
 
-// const menuButton = document.querySelector('.menu');
-// const dropMenu = document.querySelector('.drop-menu');
-
-// menuButton.addEventListener('click', function() {
-//   dropMenu.classList.toggle('visible');
-//   menuButton.classList.toggle('active');
-// });
+  const menuButton = document.querySelector('.menu');
+  const dropMenu = document.querySelector('.drop-menu');
+  const navListItems = document.querySelectorAll('.nav-list li');
+  
+  menuButton.addEventListener('click', function() {
+    dropMenu.classList.toggle('visible');
+    menuButton.classList.toggle('active');
+  
+    if (dropMenu.classList.contains('visible')) {
+      navListItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 200}ms`; // retraso de los LI
+      });
+    }
+  });
