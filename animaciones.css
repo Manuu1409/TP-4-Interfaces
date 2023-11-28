@@ -368,9 +368,13 @@ ul {
   }
 }
 
+.container:hover .container-3 {
+  display: block;
+}
 
-
-
+.container:hover .container-4 {
+  display: none;
+}
 
 
 
@@ -523,13 +527,19 @@ ul {
   position: absolute;
   top: 78%;
   left: 64%;
-  background: url(images/spiderman-Spritesheet-4.png) repeat-x;
-  animation: move 3s steps(7) infinite;
+  background: url(images/spiderman-Spritesheet-4.png);
+  cursor: pointer;
   margin-top: 50px;
   z-index: 1;
 }
 
-@keyframes move {
+
+
+.container:hover{
+  animation: move2 2s steps(7) infinite;
+}
+
+@keyframes move2 {
   0% {
     background-position: 0 0;
   }
@@ -539,28 +549,8 @@ ul {
   }
 }
 
-.container-2 {
-  width: 80px;
-  height: 110px;
-  position: absolute;
-  top: 76%;
-  left: 66%;
-  background: url(images/spiderman-spritesheet-7.png) repeat-x;
-  animation: move2 2s steps(12) infinite;
-  margin-left: 65px;
-  z-index: 1;
-  
-}
 
-@keyframes move2 {
-  0% {
-    background-position: 0 0;
-  }
 
-  100% {
-    background-position: -960px 0;
-  }
-}
 
 
 
