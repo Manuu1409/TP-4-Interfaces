@@ -354,7 +354,7 @@ nav{
     position: absolute;
     right: 650px;
     top: 2400px;
-
+    transition: transform 2s ease;
 }
 .seccion-3-tercerImagen{
     width: 543.218px;
@@ -363,8 +363,9 @@ nav{
     position: absolute;
     right: 650px;
     top: 2580px;
-
+    transition: transform 2s ease;
 }
+
 .seccion-3-cuartaImagen{
     width: 546.108px;
     height: 326.509px;
@@ -372,9 +373,13 @@ nav{
     position: absolute;
     right: 650px;
     top: 2820px;
-    
-
+    transition: transform 2s ease;
 }
+
+.seccion-3-segundaImagen:hover ,.seccion-3-tercerImagen:hover ,.seccion-3-cuartaImagen:hover {
+    transform: rotate(0deg);
+}
+
 
 
 .seccion-4{

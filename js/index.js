@@ -24,8 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
     let flexCard02 = document.querySelector('.contenedor-2');
     let flexCard03 = document.querySelector('.contenedor-3');
 
-    
+    const seccion3segundaImagen = document.querySelector('.seccion-3-segundaImagen')  
+    const seccion3segundaImagenLimit = 2380;
+    const seccion3segundaImagenStart = 2260;
 
+    const seccion3terceraImagen = document.querySelector('.seccion-3-tercerImagen')  
+    const seccion3terceraImagenLimit = 2480;
+    const seccion3terceraImagenStart = 2260;
+
+    const seccion3cuartaImagen = document.querySelector('.seccion-3-cuartaImagen')  
+    const seccioncuartaImagenLimit = 2580;
+    const seccion3cuartaImagenStart = 2260;
 
     window.addEventListener('scroll', function () {
       let logo = document.querySelector('.layer-3');
@@ -90,9 +99,45 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       
+      if (scrollY >= seccion3segundaImagenStart && scrollY< seccion3segundaImagenLimit ) {
+        seccion3segundaImagen.style.transform = `translateY(${(scrollY - seccion3segundaImagenStart) * scrollFactor}px) rotate(-13.078deg)`;
+      } 
+
+      if (scrollY >= seccion3terceraImagenStart && scrollY< seccion3terceraImagenLimit ) {
+        seccion3terceraImagen.style.transform = `translateY(${(scrollY - seccion3terceraImagenStart) * scrollFactor}px) rotate(-26.474deg)`;
+      } 
+
+      if (scrollY >= seccion3cuartaImagenStart && scrollY< seccion3terceraImagenLimit ) {
+        seccion3cuartaImagen.style.transform = `translateY(${(scrollY - seccion3cuartaImagenStart) * scrollFactor}px) rotate(-36.016deg)`;
+      } 
 
 
+      seccion3segundaImagen.addEventListener('mouseover', () => {
+        seccion3segundaImagen.style.transform = "rotate(-13.078deg)"
+      });
+      
+      // Elimina los estilos cuando se sale del hover
+      seccion3segundaImagen.addEventListener('mouseout', () => {
+        seccion3segundaImagen.style.transform = "rotate(-36.016deg)"
+      });
 
+      seccion3terceraImagen.addEventListener('mouseover', () => {
+        seccion3terceraImagen.style.transform = " rotate(-26.474deg)"
+      });
+      
+      // Elimina los estilos cuando se sale del hover
+      seccion3terceraImagen.addEventListener('mouseout', () => {
+        seccion3terceraImagen.style.transform = "rotate(-36.016deg)"
+      });
+
+      seccion3cuartaImagen.addEventListener('mouseover', () => {
+        seccion3cuartaImagen.style.transform = "rotate(0deg)"
+      });
+      
+      // Elimina los estilos cuando se sale del hover
+      seccion3cuartaImagen.addEventListener('mouseout', () => {
+        seccion3cuartaImagen.style.transform = "rotate(-36.016deg)"
+      });
     });
   });
 
