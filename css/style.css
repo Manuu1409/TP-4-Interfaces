@@ -387,7 +387,7 @@ nav{
     height: 898px;
     position: absolute;
     top: 2970px;
-    z-index:-1;
+    z-index: -1;
 }
 .tituloSeccion-4{
     position: absolute;
@@ -423,63 +423,55 @@ nav{
     height: 527.626px;
     background-image: url("../images/cieloSeccion-4.png");
     animation: scrollDos 5s infinite linear ;
+    z-index: -1;
 }
 
-.seccion-4-layer-5{
+.seccion-4-layer-5 {
     background-size: cover;
-
     position: absolute;
-    top:  3500px;
+    top: 3500px;
     margin-left: 100px;
     width: 1077.059px;
     height: 527.626px;
-    background-image: url("../images/capa3-Seccion-4.png");
 }
 
-.seccion-4-layer-4{
+.seccion-4-layer-4 {
     background-size: cover;
-
     position: absolute;
-    top:  3500px;
+    top: 3500px;
     margin-left: 100px;
-    background-image: url("../images/capa2-Seccion-4.png");
     width: 1077.059px;
     height: 527.626px;
 }
-.seccion-4-layer-3{
-    background-size: cover;
 
+.seccion-4-layer-3 {
+    background-size: cover;
     margin-left: 130px;
     position: absolute;
-    top:  3443px;
-    background-image: url("../images/elasticGirl.png");
+    top: 3443px;
     width: 451.258px;
     height: 591.442px;
     transform: rotate(-12.483deg);
-
 }
-.seccion-4-layer-2{
-    background-size: cover;
 
+.seccion-4-layer-2 {
+    background-size: cover;
     position: absolute;
-    top:  3300px;
+    top: 3300px;
     margin-left: 550px;
     width: 398px;
     height: 552.462px;
     transform: rotate(13.615deg);
-    background-image: url("../images/pantera-removebg-preview.png");
-
 }
-.seccion-4-layer-1{
+
+.seccion-4-layer-1 {
     background-size: cover;
     position: absolute;
-    top:  3640px;
+    top: 3640px;
     width: 410.106px;
     height: 437.972px;
     transform: rotate(7.515deg);
     margin-left: 790px;
-    background-image: url("../images/hulk.png");
-
 }
 
 
@@ -916,9 +908,11 @@ nav{
     }
 
     
+   
+    .menu .rect1,
     .menu .rect2,
     .menu .rect3 {
-      transition: transform 0.5s ease; /* Ajusta la duración y el tipo de animación según tus preferencias */
+      transition: opacity 0.4s ease, transform 0.5s ease; /* Ajusta la duración y el tipo de animación según tus preferencias */
     }
 
 /* animacion*/

@@ -144,31 +144,49 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  (function() {
-    // Add event listener
-    document.addEventListener("mousemove", parallax);
-    const elem1 = document.querySelector('.seccion-4-layer-1');
-    const elem2 = document.querySelector('.seccion-4-layer-2');
-    const elem3 = document.querySelector('.seccion-4-layer-3');
 
-    // Magic happens here
-    function parallax(e) {
-        let _w = window.innerWidth/2;
-        let _h = window.innerHeight/2;
-        let _mouseX = e.clientX;
-        let _mouseY = e.clientY;
-        let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
-        let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
-        let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-        let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-        console.log(x);
-        elem1.style.backgroundPosition = x;
-        elem2.style.backgroundPosition = x;
-        elem3.style.backgroundPosition = x;
+  document.addEventListener("DOMContentLoaded", function () {
+    const contenedor = document.querySelector(".seccion-4-img");
+  
+    contenedor.addEventListener("mousemove", (event) => {
+      const { clientX, clientY } = event;
+      const { offsetWidth, offsetHeight } = contenedor;
+  
 
-    }
+    //  Calcula el centro del contenedor parallax en términos de coordenadas X e Y.
+      const centerX = offsetWidth / 2; 
+      const centerY = offsetHeight / 2; 
+  
+     // Calcula el desplazamiento del mouse en términos de X e Y,
+     //  dividiendo la distancia entre la posición actual del mouse y el centro del contenedor por 20.
 
-})();
+      const moveX = (clientX - centerX) / 20;
+      const moveY = (clientY - centerY) / 20;
+  
+ 
+      const heroina = document.querySelector(".seccion-4-layer-3");
+      const negro = document.querySelector(".seccion-4-layer-2");
+      const hulk = document.querySelector(".seccion-4-layer-1");
+      // transformaciones de translate para los 3
+   
+      negro.style.transform = `translateX(${moveX * -0.5}px) translateY(${moveY * -0.7}px) rotate(4deg)`;
+      // Movimiento de agrandar y achicar sutil para el "negro"
+      const scaleFactor = 1 + Math.abs(moveY / 100);
+      negro.style.transform += ` scale(${scaleFactor})`;
+
+      //movimiento de la heroina
+      // Ajustar movimiento de la "heroina" hacia la izquierda
+      const heroinaMoveX = moveX * -2; // Ajusta según sea necesario
+      heroina.style.transform = `translateX(${heroinaMoveX}px) translateY(${moveY * -2.2}px) rotate(${moveY / 5}deg) scale(${1 - Math.abs(moveY / 100)})`;
+      
+
+    
+      // Movimiento del "hulk" con escala
+      hulk.style.transform = `translateX(${moveX * -1.4}px) translateY(${moveY * -1.7}px) scale(${1 - Math.abs(moveX / 100)})`;
+    });
+  });
+  
+
 
 
 //selecciono cada clase y lo almaceno
