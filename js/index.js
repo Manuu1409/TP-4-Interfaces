@@ -176,6 +176,7 @@ blackSpiderSpiderHover.addEventListener('mouseover', () => {
   fondoBlackSpider.style.opacity = 1;
   SpiderHover.style.filter = 'blur(5px)'
   ChicaSpiderSpiderHover.style.filter = 'blur(5px)'
+  blackSpiderSpiderHover.style.transform = 'scale(1.3)'
 });
 
 // Elimina los estilos cuando se sale del hover
@@ -185,6 +186,7 @@ blackSpiderSpiderHover.addEventListener('mouseout', () => {
   fondoBlackSpider.style.opacity = 0;
   SpiderHover.style.filter = 'blur(0px)'
   ChicaSpiderSpiderHover.style.filter = 'blur(0px)'
+  blackSpiderSpiderHover.style.transform = 'scale(1)'
 });
 
 
@@ -203,6 +205,7 @@ SpiderHover.addEventListener('mouseover', () => {
   fondoSpider.style.opacity = 1;
   blackSpiderSpiderHover.style.filter = 'blur(5px)'
   ChicaSpiderSpiderHover.style.filter = 'blur(5px)'
+  SpiderHover.style.transform = 'scale(1.3)'
 });
 
 // Elimina los estilos cuando se sale del hover
@@ -212,6 +215,8 @@ SpiderHover.addEventListener('mouseout', () => {
   fondoSpider.style.opacity = 0;
   blackSpiderSpiderHover.style.filter = 'blur(0px)'
   ChicaSpiderSpiderHover.style.filter = 'blur(0px)'
+  SpiderHover.style.transform = 'scale(1)'
+  SpiderHover.style.transform = 'scale(1)'
 });
 
 
@@ -232,6 +237,7 @@ SpiderHover.addEventListener('mouseout', () => {
     fondoChicaSpider.style.opacity = 1;
     SpiderHover.style.filter = 'blur(5px)'
     blackSpiderSpiderHover.style.filter = 'blur(5px)'
+    ChicaSpiderSpiderHover.style.transform = 'scale(1.3)'
 
   });
   
@@ -242,6 +248,7 @@ SpiderHover.addEventListener('mouseout', () => {
     fondoChicaSpider.style.opacity = 0;
     SpiderHover.style.filter = 'blur(0px)'
     blackSpiderSpiderHover.style.filter = 'blur(0px)'
+    ChicaSpiderSpiderHover.style.transform = 'scale(1)'
   });
 
 
