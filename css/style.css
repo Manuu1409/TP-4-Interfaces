@@ -846,3 +846,10 @@ nav{
     top: 9263px;
     left: 100px;
 }
+
+.para-conexion-seccion-8 {
+    z-index: -1;
+    position: absolute;
+    top: 6310px;
+    left: 0px;
+}
