@@ -14,27 +14,27 @@
 </head>
 <body>
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="39" viewBox="0 0 46 39" fill="none">
+        <svg class="menu" xmlns="http://www.w3.org/2000/svg" width="46" height="39" viewBox="0 0 46 39" fill="none">
             <g filter="url(#filter0_d_19_84)">
-            <rect x="2" y="2" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
-            <rect x="2" y="13" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
-            <rect x="2" y="24" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
+            <rect class="rect1" x="2" y="2" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
+            <rect class="rect2" x="2" y="13" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
+            <rect class="rect3" x="2" y="24" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
             </g>
-            <defs>
-            <filter id="filter0_d_19_84" x="0" y="0" width="46" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dx="4" dy="5"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.00784314 0 0 0 0 0.0941176 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_19_84"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_19_84" result="shape"/>
-            </filter>
-            </defs>
         </svg>
         <button class="btnComprar">COMPRAR</button>
             <div class="layer layer-3"></div>
     </header>
+    
+      <div class="drop-menu" id="nav">
+        <ul class="nav-list">
+          <li>Spidermans</li>
+          <li>Enemigos</li>
+          <li>Amigos</li>
+          <li>Precios</li>
+          <li>Sobre el juego</li>
+        </ul>
+      </div>
+
     <nav> 
         <div class="layer-10"></div>
         <div class="layer layer-9"></div>
@@ -105,10 +105,10 @@
         <h1 class="tituloSeccion-4">Los vengadores acompañando tu aventura</h1>
         <div class="seccion-4-layer seccion-4-layer-6"></div>
         <div class="seccion-4-layer seccion-4-layer-5"></div>
+        <div class="seccion-4-layer seccion-4-layer-1"></div>
         <div class="seccion-4-layer seccion-4-layer-4"></div>
         <div class="seccion-4-layer seccion-4-layer-3"></div>
         <div class="seccion-4-layer seccion-4-layer-2"></div>
-        <div class="seccion-4-layer seccion-4-layer-1"></div>
 
         
         <!--             ARRANCA OTRA SECCION           -->
@@ -218,8 +218,8 @@
             <path d="M0 719.861L1280 841.639V0L0 132.5V719.861Z" fill="#2552C8" fill-opacity="0.09"/>
         </svg>
         <svg class="svg-barraInferior-SpiderMan-seccion-7" xmlns="http://www.w3.org/2000/svg" width="1280" height="158" viewBox="0 0 1280 158" fill="none">
-            <path d="M0 35.8608L1280 157.639V104L0 0L0 35.8608Z" fill="#2552C8" fill-opacity="0.61"/>
-            <path d="M0 35.8608L1280 157.639V104L0 0L0 35.8608Z" fill="#2552C8" fill-opacity="0.61"/>
+            <path d="M0 35.8608L1280 157.639V104L0 0L0 35.8608Z" fill="#2552C8" />
+            <path d="M0 35.8608L1280 157.639V104L0 0L0 35.8608Z" fill="#2552C8" />
         </svg>
 
 
@@ -231,16 +231,18 @@
             <path d="M0 719.861L1280 841.639V0L0 132.5V719.861Z" fill="black" fill-opacity="0.1"/>
             <path d="M0 719.861L1280 841.639V0L0 132.5V719.861Z" fill="black" fill-opacity="0.1"/>
         </svg>
-        <svg class="svg-barraInferior-blackSpider-seccion-7" xmlns="http://www.w3.org/2000/svg" width="1280" height="144" viewBox="0 0 1280 144" fill="none">
-            <path d="M0 21.8608L1280 143.639V93L0 0.5V21.8608Z" fill="#304C71"/>
-            <path d="M0 21.8608L1280 143.639V93L0 0.5V21.8608Z" fill="#304C71"/>
+        <svg class="svg-barraInferior-blackSpider-seccion-7" xmlns="http://www.w3.org/2000/svg" width="1280" height="158" viewBox="0 0 1280 158" fill="none">
+            <path d="M0 35.8608L1280 157.639V104L0 0L0 35.8608Z" fill="#304C71"/>
+            <path d="M0 35.8608L1280 157.639V104L0 0L0 35.8608Z" fill="#304C71"/>
         </svg>
 
         <img class="chicaSpider-seccion-7" src="../images/chicaSpiderUltima.png" alt="">
         <img class="SpiderMan-seccion-7" src="../images/SpiderManUltimo.png" alt="">
         <img class="blackSpider-seccion-7" src="../images/BlackSpiderUltimo.png" alt="">
-
-
+        
+        <svg class="para-conexion-seccion-8" xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" fill="none">
+            <path d="M0 317.85L1280 440V21.4077L0 0V317.85Z" fill="white"/>
+        </svg>
         <!--             ARRANCA OTRA SECCION           -->
 
 

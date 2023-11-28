@@ -24,9 +24,8 @@ header{
 header svg {
     transform: scale(1.2);
     position: absolute;
-    left: 100px;
+    left: 130px;
     margin-top: 20px;
-
 }
 
 header.abajo{
@@ -57,7 +56,9 @@ header.abajo{
     line-height: 94.5%; /* 18.9px */
     letter-spacing: 2.2px;
 }
-
+.btnComprar:hover{
+    box-shadow: 0px 0px 15px 10px white;
+}
 @keyframes fadeIn {
     0% {
         opacity:0;
@@ -354,7 +355,7 @@ nav{
     position: absolute;
     right: 650px;
     top: 2400px;
-
+    transition: transform 2s ease;
 }
 .seccion-3-tercerImagen{
     width: 543.218px;
@@ -363,8 +364,9 @@ nav{
     position: absolute;
     right: 650px;
     top: 2580px;
-
+    transition: transform 2s ease;
 }
+
 .seccion-3-cuartaImagen{
     width: 546.108px;
     height: 326.509px;
@@ -372,9 +374,11 @@ nav{
     position: absolute;
     right: 650px;
     top: 2820px;
-    
-
+    transition: transform 2s ease;
 }
+
+
+
 
 
 .seccion-4{
@@ -605,6 +609,9 @@ nav{
     background: #FFE901;
     /* Drop Shadow */
     box-shadow: 4px 5px 0px 0px #02187E;
+}
+.btn-Seccion-6:hover{
+    box-shadow: 0px 0px 15px 10px white;
 }
 
 .svg-seccion-5{
@@ -846,3 +853,93 @@ nav{
     top: 9263px;
     left: 100px;
 }
+
+.para-conexion-seccion-8 {
+    z-index: -1;
+    position: absolute;
+    top: 6310px;
+    left: 0px;
+}
+
+
+
+
+
+
+
+  
+  .drop-menu {
+    display: none;
+    width: 200px;
+    height: 450px;
+    background-color: rgba(255, 255, 76, 0.425);
+    transition: opacity 0.5s ease-in-out; 
+    opacity: 0;
+    position: absolute;
+    z-index: 999; /* menú por encima del contenido */
+    border: 2px solid black;
+    position: fixed;
+  }
+  .drop-menu.abajo2{
+    margin-top: 80px;
+}
+  .visible {
+    display: block;
+    opacity: 1;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+  
+  /* retraso gradual a cada elemento li */
+  .nav-list li {
+    list-style: none; /*para que no esten los puntos*/
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide 0.7s forwards;
+  }
+  
+  
+  @keyframes slide {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  
+  
+  
+  li:hover{
+    color: black;
+  }
+  
+  ul {
+    
+  }
+  
+  
+  /* animacion*/
+  
+  
+
+
+  .menu.active .rect1{
+    opacity: 0;
+  }
+  .menu.active .rect2 {
+    transform: translate(20px, -7px) rotate(45deg);
+  }
+  
+  .menu.active .rect3 {
+    transform: translate(-10px, 15px) rotate(-45deg);
+  }
