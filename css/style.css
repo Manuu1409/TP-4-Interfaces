@@ -862,13 +862,7 @@ nav{
 }
 
 
-
-
-
-
-
-  
-  .drop-menu {
+    .drop-menu {
     display: none;
     width: 200px;
     height: 450px;
@@ -879,67 +873,63 @@ nav{
     z-index: 999; /* menú por encima del contenido */
     border: 2px solid black;
     position: fixed;
-  }
-  .drop-menu.abajo2{
+    }
+    .drop-menu.abajo2{
     margin-top: 80px;
-}
-  .visible {
+    }
+    .visible {
     display: block;
     opacity: 1;
-  }
-  
-  .nav-list {
+    }
+
+    .nav-list {
     display: flex;
     flex-direction: column;
     margin-top: 75px;
     margin-left: 20px;
     font-size: 1.5rem;
-  }
-  
-  /* retraso gradual a cada elemento li */
-  .nav-list li {
+    }
+
+    /* retraso gradual a cada elemento li */
+    .nav-list li {
     list-style: none; /*para que no esten los puntos*/
     margin-bottom: 50px;
     opacity: 0;
     transform: translateX(-100%);
     animation: slide 0.7s forwards;
-  }
-  
-  
-  @keyframes slide {
+    }
+
+
+    @keyframes slide {
     from {
-      opacity: 0;
-      transform: translateX(-100%);
+        opacity: 0;
+        transform: translateX(-100%);
     }
     to {
-      opacity: 1;
-      transform: translateX(0%);
+        opacity: 1;
+        transform: translateX(0%);
     }
-  }
-  
-  
-  
-  li:hover{
+    }
+
+    li:hover{
     color: black;
-  }
-  
-  ul {
+    }
+
     
-  }
-  
-  
-  /* animacion*/
-  
-  
+    .menu .rect2,
+    .menu .rect3 {
+      transition: transform 0.5s ease; /* Ajusta la duración y el tipo de animación según tus preferencias */
+    }
 
+/* animacion*/
 
-  .menu.active .rect1{
+    .menu.active .rect1{
     opacity: 0;
-  }
-  .menu.active .rect2 {
+    }
+    .menu.active .rect2 {
     transform: translate(20px, -7px) rotate(45deg);
-  }
-  
-  .menu.active .rect3 {
+    }
+
+    .menu.active .rect3 {
     transform: translate(-10px, 15px) rotate(-45deg);
-  }
+    }
