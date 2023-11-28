@@ -550,6 +550,32 @@ ul {
 }
 
 
+.container2 {
+  height: 43px;
+  width: 43px;
+  position: absolute;
+  top: 101%;
+  left: 45%;
+  z-index: 1;
+  cursor: pointer;
+  background: url(images/spiderman-corriendo-spritesheet.png);
+}
+
+.container2:hover {
+  animation: run 1s steps(6) infinite;
+}
+
+@keyframes run {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -258px 0;
+  }
+}
+
+
 
 
 
