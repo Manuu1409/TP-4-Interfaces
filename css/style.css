@@ -57,7 +57,9 @@ header.abajo{
     line-height: 94.5%; /* 18.9px */
     letter-spacing: 2.2px;
 }
-
+.btnComprar:hover{
+    box-shadow: 0px 0px 15px 10px white;
+}
 @keyframes fadeIn {
     0% {
         opacity:0;
@@ -376,9 +378,7 @@ nav{
     transition: transform 2s ease;
 }
 
-.seccion-3-segundaImagen:hover ,.seccion-3-tercerImagen:hover ,.seccion-3-cuartaImagen:hover {
-    transform: rotate(0deg);
-}
+
 
 
 
@@ -610,6 +610,9 @@ nav{
     background: #FFE901;
     /* Drop Shadow */
     box-shadow: 4px 5px 0px 0px #02187E;
+}
+.btn-Seccion-6:hover{
+    box-shadow: 0px 0px 15px 10px white;
 }
 
 .svg-seccion-5{
