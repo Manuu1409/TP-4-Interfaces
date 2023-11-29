@@ -59,3 +59,10 @@ body{
         transform: rotate(360deg);
     }
 }
+
+p {
+    position: absolute;
+    left: 51.4%;
+    top: 55.5%;
+    font-size: 40px;
+}
