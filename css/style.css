@@ -800,6 +800,7 @@ nav{
     position: absolute;
     top: 8415px;
     left: 998px; 
+    opacity: 0;
 }
 .chicaSpider-seccion-8{
     position: absolute;
@@ -946,4 +947,59 @@ nav{
 
     .menu.active .rect3 {
     transform: translate(-10px, 15px) rotate(-45deg);
+    }
+
+
+    .container-SpriteSheet {
+      width: 75px; /* Ancho de un solo frame */
+      height: 70px;
+      position: absolute;
+      top: 8415px;
+      left: 998px;
+      background: url(../images/spiderman-Spritesheet-4.png);
+      cursor: pointer;
+      z-index: 1;
+
+    }
+    
+    /*           aca va el spriteSheet                                                   */
+    
+    .container-SpriteSheet:hover{
+      animation: move2 2s steps(7) infinite;
+    }
+    
+    @keyframes move2 {
+      0% {
+        background-position: 0 0;
+      }
+    
+      100% {
+        background-position: -759px 0;
+      }
+    }
+    
+    
+    .container2-SpriteSheet {
+      height: 43px;
+      width: 43px;
+      position: absolute;
+      top: 8315px;
+      left: 110px;
+      cursor: pointer;
+      background: url(../images/spiderman-corriendo-spritesheet.png);
+      z-index: 1;
+    }
+    
+    .container2-SpriteSheet:hover {
+      animation: run 1s steps(6) infinite;
+    }
+    
+    @keyframes run {
+      0% {
+        background-position: 0 0;
+      }
+    
+      100% {
+        background-position: -258px 0;
+      }
     }
